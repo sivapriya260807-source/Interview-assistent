@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Interview Prep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Smart Interview Prep</h1>
+
+            <p>
+                Practice questions and improve your interview skills
+            </p>
+
+            <button id="darkBtn" onclick="toggleDarkMode()">
+                🌙 Dark Mode
+            </button>
+        </header>
+        <section class="settings">
+
+            <h2>Start Interview</h2>
+
+            <label>Choose Category</label>
+
+            <select id="category">
+
+                <option value="18">
+                    Computer Science
+                </option>
+
+                <option value="9">
+                    General Knowledge
+                </option>
+
+                <option value="17">
+                    Science
+                </option>
+
+            </select>
+            <label>Number of Questions</label>
+
+            <select id="amount">
+
+                <option value="5">5 Questions</option>
+
+                <option value="10">
+                    10 Questions
+                </option>
+
+            </select>
+            <button class="start-btn" onclick="startQuiz()">
+                🚀 Start Interview
+            </button>
+
+        </section>
+        <section id="quiz" class="quiz">
+
+            <div class="quiz-top">
+
+                <span id="questionNumber">
+                    Question 1/5
+                </span>
+
+                <span>
+                    ⏱️ <b id="timer">60</b>s
+                </span>
+
+            </div>
+            <div class="progress-box">
+
+                <div id="progress"></div>
+            </div>
+
+            <h2 id="question">
+                Question will appear here
+            </h2>
+            <div id="answers"></div>
+            <div class="buttons">
+
+                <button onclick="showHint()">
+                    💡 Hint
+                </button>
+
+                <button onclick="showAnswer()">
+                    👁️ Show Answer
+                </button>
+
+                <button onclick="bookmarkQuestion()">
+                    ⭐ Bookmark
+                </button>
+
+            </div>
+            <p id="hint"></p>
+            <p id="correctAnswer"></p>
+            <button
+                class="next-btn"
+                onclick="nextQuestion()">
+
+                Next Question →
+            </button>
+            <h3>
+                Score:
+                <span id="score">0</span>
+            </h3>
+
+        </section>
+        <section id="result">
+
+            <h2>🎉 Interview Completed!</h2>
+
+            <h3>
+                Your Score:
+                <span id="finalScore"></span>
+            </h3>
+
+            <h3 id="performance"></h3>
+
+            <button onclick="saveHistory()">
+                💾 Save Result
+            </button>
+
+            <button onclick="restartQuiz()">
+                🔄 Try Again
+            </button>
+
+        </section>
+        <section class="history">
+
+            <h2>⭐ Bookmarked Questions</h2>
+
+            <div id="bookmarks">
+                No bookmarks yet.
+            </div>
+
+        </section>
+        <section class="history">
+
+            <h2>📋 Interview History</h2>
+
+            <div id="historyList">
+                No previous attempts.
+            </div>
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
